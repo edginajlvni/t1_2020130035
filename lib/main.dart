@@ -10,7 +10,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Flutter Demo'),
+          title: const Text('Hai'),
         ),
         body: const Main(),
       ),
@@ -33,18 +33,60 @@ class Main extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(16),
-      child: Center(
-        child: TextField(
-          decoration: InputDecoration(
-            // labelText: 'Label',
-            hintText: 'Try to find...',
-            prefixIcon: Icon(Icons.search),
-            border: OutlineInputBorder(),
+    double baseWidth = 720;
+    double fem = MediaQuery.of(context).size.width / baseWidth;
+    //double ffem = fem * 0.97;
+
+    return Column(children: [
+      TextField(
+        decoration: InputDecoration(
+          hintText: 'Try to find ....',
+          contentPadding: const EdgeInsets.symmetric(vertical: 25),
+          prefixIcon: const Icon(Icons.search),
+          //  contentPadding: EdgeInsets.all(16),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
           ),
         ),
       ),
-    );
+      const SizedBox(height: 40),
+      Positioned(
+        // ageTRK (28:57)
+        left: 90 * fem,
+        top: 660 * fem,
+        child: Container(
+          padding: EdgeInsets.fromLTRB(
+              43.05 * fem, 20.05 * fem, 46.95 * fem, 25 * fem),
+          width: 135 * fem,
+          height: 135 * fem,
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 229, 200, 255),
+            borderRadius: BorderRadius.circular(10 * fem),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                // ageuHK (28:55)
+                margin:
+                    EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 29.95 * fem),
+                child: const Text(
+                  'Add Task',
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              Container(
+                // 2bs (28:56)
+                margin:
+                    EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0.11 * fem, 0 * fem),
+                child: const Text(
+                  'Creatives for',
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ]);
   }
 }
