@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class First extends StatefulWidget {
+  const First({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<First> createState() => _FirstState();
 }
 
-class _HomeScreenState extends State<HomeScreen>
+class _FirstState extends State<First>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
@@ -25,12 +25,6 @@ class _HomeScreenState extends State<HomeScreen>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-        centerTitle: true,
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),
-    );
+    return const Placeholder();
   }
 }

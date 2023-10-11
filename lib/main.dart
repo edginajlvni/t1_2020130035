@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:t1_2020130035/firstpage.dart';
+// import 'package:t1_2020130035/homescreeen.dart';
+// import 'package:t1_2020130035/secondpage.dart';
 //import 'package:test/assets_screen.dart';
 //import 'package:test/home_screen.dart';
-// import 'package:test/form_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,38 +14,34 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'EDGINA JULIVIANI',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      home: FirstPage(),
 
-      home: Scaffold(
-          // appBar: AppBar(
-          //   // title: const Text(''),
-          // ),
-          body: const Main(),
-      //     // body: const Text('Edgina Juliviani')
-      )
+      // home: Scaffold(
+      //     body: const Main(),
+      // )
+
+      // home: const HomeScreen(),
+      // home: const SecondPage(),
     );
   }
 }
 
-class Main extends StatelessWidget {
-  const Main({super.key});
+// class Main extends StatelessWidget {
+//   const Main({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        Text('Welcome back, '),
-        Text('Edgina Juliviani!'),
-      ],
+//   @override
+//   Widget build(BuildContext context) {
+//     return const Column(
+//       children: [
+//         Text('Welcome back, '),
+//         Text('Edgina Juliviani!'),
+//       ],
 
-    );
-  }
-}
+//     );
+//   }
+// }
     //double baseWidth = 720;
 //     double fem = MediaQuery.of(context).size.width / baseWidth;
 //     //double ffem = fem * 0.97;
