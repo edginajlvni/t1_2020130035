@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:t1_2020130035/firstpage.dart';
-// import 'package:t1_2020130035/second.dart';
-// import 'package:t1_2020130035/firstpage.dart';
-// import 'package:t1_2020130035/secondpage.dart';
-// import 'package:t1_2020130035/homescreeen.dart';
 // import 'package:t1_2020130035/secondpage.dart';
 //import 'package:test/assets_screen.dart';
-//import 'package:test/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,16 +12,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'EDGINA JULIVIANI',
-      home: FirstPage(),
-
-      // home: Scaffold(
-      //     body: const Main(),
-      // )
-
-      // home: const HomeScreen(),
-      // home: const SecondPage(),
+    return MaterialApp(
+      title: 'Edgina Juliviani',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+        fontFamily: 'Abereto',
+      ),
+      home: const FirstPage(),
     );
   }
 }

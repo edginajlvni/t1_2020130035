@@ -265,6 +265,7 @@ class _FirstPageState extends State<FirstPage> {
       style: TextStyle(
         fontSize: 25,
         fontWeight: FontWeight.bold,
+        fontFamily: 'Abereto',
       ),
     );
   }
@@ -292,6 +293,7 @@ class _FirstPageState extends State<FirstPage> {
         style: TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.bold,
+          fontFamily: 'Abereto',
         ));
   }
 
