@@ -19,6 +19,18 @@ class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+              items: const <BottomNavigationBarItem>[
+                BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
+                BottomNavigationBarItem(icon: Icon(Icons.location_on), label: ''),
+                BottomNavigationBarItem(icon: Icon(Icons.settings), label: ''),
+              ],
+              currentIndex: _selectedIndex,
+              backgroundColor: const Color.fromARGB(207, 232, 255, 254),
+              selectedItemColor: const Color.fromARGB(255, 0, 81, 255),
+              onTap: _onItemTap,
+      ),
+
       backgroundColor: const Color.fromARGB(207, 46, 199, 191),
       body: Padding(
         padding: const EdgeInsets.all(12),
@@ -41,15 +53,47 @@ class _FirstPageState extends State<FirstPage> {
             ),
             proses(),
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             geser(),
 
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Flows List',
               style: TextStyle(
-                fontSize: 33,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            const SizedBox(height: 20),
+            const Text(
+              'Document Verificartion',
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            ),
+
+            const SizedBox(height: 5),
+            const Text(
+              '3 min ago',
+              style: TextStyle(
+                fontSize: 10,
+              ),
+            ),
+
+            const SizedBox(height: 20),
+            const Text(
+              'Newbie onboarding',
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            ),
+
+            const SizedBox(height: 5),
+            const Text(
+              '5 days ago',
+              style: TextStyle(
+                fontSize: 10,
               ),
             ),
 
