@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:t1_2020130035/firstpage.dart';
-// import 'package:t1_2020130035/secondpage.dart';
+import 'package:t1_2020130035/secondpage.dart';
 //import 'package:test/assets_screen.dart';
 
 void main() {
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: 'Abereto',
       ),
-      home: const FirstPage(),
+      home: const SecondPage(),
     );
   }
 }
